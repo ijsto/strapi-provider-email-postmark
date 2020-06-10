@@ -22,12 +22,14 @@ npm i strapi-provider-email-postmark
 
 # Configuration
 
-| Variable        | Type   | Description                      | Required | Default |
-| --------------- | ------ | -------------------------------- | -------- | ------- |
-| provider        | string | The name of the provider you use | yes      |         |
-| providerOptions | object | Provider options                 | yes      |         |
-| settings        | object | Settings                         | no       | {}      |
-| // @TODO        | ..     | ..                               |
+| Variable                | Type   | Description                                                                                        | Required                                                       | Default   |
+| ----------------------- | ------ | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------- |
+| provider                | string | The name of the provider you use                                                                   | yes                                                            |           |
+| providerOptions         | object | Provider options                                                                                   | yes                                                            |           |
+| providerOptions.apiKey  | object | Postmark API key. Please refer to [postmark docs](https://www.npmjs.com/package/postmark) for more | yes                                                            |           |
+| settings                | object | Settings                                                                                           | no                                                             | {}        |
+| settings.defaultFrom    | string | Default sender mail address                                                                        | no                                                             | undefined |
+| settings.defaultReplyTo | string | array                                                                                              | Default address or addresses the receiver is asked to reply to | no        | undefined |
 
 ### Example
 
@@ -42,7 +44,8 @@ module.exports = ({ env }) => ({
       apiKey: env("POSTMARK_API_KEY"),
     },
     settings: {
-      // @TODO
+      defaultFrom: "john.doe@ijs.to",
+      defaultReplyTo: "code@ijs.to",
     },
   },
   // ...
