@@ -54,4 +54,4 @@ module.exports = ({ env }) => ({
 
 # Licence
 
-- [MIT](https://github.com/strapi/strapi/blob/HEAD/LICENSE.md)
+- [MIT](https://github.com/ijsto/strapi-provider-email-postmark/blob/master/README.md)
