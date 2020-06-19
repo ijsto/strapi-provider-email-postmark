@@ -29,7 +29,8 @@ npm i strapi-provider-email-postmark
 | providerOptions.apiKey  | object | Postmark API key. Please refer to [postmark docs](https://www.npmjs.com/package/postmark) for more | yes                                                            |           |
 | settings                | object | Settings                                                                                           | no                                                             | {}        |
 | settings.defaultFrom    | string | Default sender mail address                                                                        | no                                                             | undefined |
-| settings.defaultReplyTo | string | array                                                                                              | Default address or addresses the receiver is asked to reply to | no        | undefined |
+| settings.defaultTo      | string | Default receiver mail address                                                                      | no                                                             | undefined |
+| settings.defaultReplyTo | string | Default address the receiver is asked to reply to                                                  | no                                                             | undefined |
 
 ### Example
 
@@ -45,6 +46,7 @@ module.exports = ({ env }) => ({
     },
     settings: {
       defaultFrom: "john.doe@ijs.to",
+      defaultTo: "john.doe@ijs.to",
       defaultReplyTo: "code@ijs.to",
     },
   },
