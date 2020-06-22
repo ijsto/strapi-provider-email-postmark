@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.4] - 2020-06-21
 
+### Added
+
+- settings.defaultTo
+
 ### Updated
 
 - strapi-utils
@@ -14,12 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - package version
-
-## [3.1.0] - 2020-06-19
-
-### Added
-
-- settings.defaultTo
 
 ## [3.0.1] - 2020-06-09
 
