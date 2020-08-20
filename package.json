@@ -6,9 +6,6 @@
     "email": "scott.agirs@gmail.com",
     "name": "Scott Agirs Neminskis"
   },
-  "bugs": {
-    "url": "https://github.com/ijsto/strapi-provider-email-postmark/issues"
-  },
   "directories": {
     "lib": "./lib"
   },
@@ -21,13 +18,17 @@
     "isProvider": true
   },
   "keywords": [
-    "email",
     "strapi",
+    "provider",
+    "email",
     "postmark"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/ijsto/strapi-provider-email-postmark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ijsto/strapi-provider-email-postmark/issues"
   },
   "engines": {
     "node": ">=10.0.0",
