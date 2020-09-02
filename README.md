@@ -1,6 +1,6 @@
 # strapi-provider-email-postmark
 
-[Strapi](http://strapi.io/) email service for [Mailjet](https://mailjet.com/)
+[Strapi](http://strapi.io/) email service for [Postmark](https://postmarkapp.com/)
 
 # Prerequisites
 
