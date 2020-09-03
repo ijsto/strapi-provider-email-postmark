@@ -19,6 +19,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - package version
 
+## [3.0.5] - 2020-09-03
+
+### Added
+
+- custom methods
+- templateId
+- templateAlias
+- variables
+
 ## [3.0.1] - 2020-06-09
 
 ### Added
