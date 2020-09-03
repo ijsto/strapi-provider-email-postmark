@@ -50,6 +50,29 @@ module.exports = ({ env }) => ({
 });
 ```
 
+### Usage
+
+Call the `send` function on the email service, as you would for any strapi email service.
+
+```javascript
+await strapi.plugins.email.services.email.send({
+  to: "john.doe@ijs.to",
+  text: "Hello John"
+});
+```
+
+To send an email via a template, set `templateId` or `templateAlias` (and `variables`) to use the `sendEmailWithTemplate` method.
+
+```javascript
+await strapi.plugins.email.services.email.send({
+  to: "john.doe@ijs.to",
+  templateAlias: "code-your-own",
+  variables: {
+    name: "John"
+  }
+});
+```
+
 # Licence
 
 - [MIT](https://github.com/ijsto/strapi-provider-email-postmark/blob/master/LICENSE.md)
