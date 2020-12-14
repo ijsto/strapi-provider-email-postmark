@@ -18,13 +18,13 @@ npm i strapi-provider-email-postmark
 
 # Configuration
 
-| Variable                      | Type   | Description                                                                                        | Required | Default   |
-| ----------------------------- | ------ | -------------------------------------------------------------------------------------------------- | -------- | --------- |
+| Variable                      | Type   | Description                                                                                                                                                                   | Required | Default   |
+| ----------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------- |
 | provider                      | string | The name of the provider you use                                                                                                                                              | yes      |           |
 | providerOptions               | object | Provider options                                                                                                                                                              | yes      |           |
 | providerOptions.apiKey        | string | Postmark API key. Please refer to [postmark docs](https://www.npmjs.com/package/postmark) for more                                                                            | yes      |           |
-| providerOptions.messageStream | string | Send through a specific message stream. Please refer to [postmark docs](https://postmarkapp.com/support/article/1207-how-to-create-and-send-through-message-streams) for more | no       | undefined |
 | settings                      | object | Settings                                                                                                                                                                      | no       | {}        |
+| settings.defaultMessageStream | string | Send through a specific message stream. Please refer to [postmark docs](https://postmarkapp.com/support/article/1207-how-to-create-and-send-through-message-streams) for more | no       | undefined |
 | settings.defaultFrom          | string | Default sender mail address                                                                                                                                                   | no       | undefined |
 | settings.defaultTo            | string | Default receiver mail address                                                                                                                                                 | no       | undefined |
 | settings.defaultReplyTo       | string | Default address the receiver is asked to reply to                                                                                                                             | no       | undefined |
@@ -40,9 +40,9 @@ module.exports = ({ env }) => ({
     provider: "postmark",
     providerOptions: {
       apiKey: env("POSTMARK_API_KEY"),
-      messageStream: env("POSTMARK_MESSAGE_STREAM"),
     },
     settings: {
+      defaultMessageStream: env("POSTMARK_MESSAGE_STREAM"),
       defaultFrom: "john.doe@ijs.to",
       defaultTo: "john.doe@ijs.to",
       defaultReplyTo: "code@ijs.to",
