@@ -28,6 +28,7 @@ npm i strapi-provider-email-postmark
 | settings.defaultFrom          | string | Default sender mail address                                                                                                                                                   | no       | undefined |
 | settings.defaultTo            | string | Default receiver mail address                                                                                                                                                 | no       | undefined |
 | settings.defaultReplyTo       | string | Default address the receiver is asked to reply to                                                                                                                             | no       | undefined |
+| settings.defaultVariables     | object | Default set of variables to be used in template emails                                                                                                                        | no       | {}        |
 
 ### Example
 
@@ -46,6 +47,9 @@ module.exports = ({ env }) => ({
       defaultFrom: "john.doe@ijs.to",
       defaultTo: "john.doe@ijs.to",
       defaultReplyTo: "code@ijs.to",
+      defaultVariables: {
+        sentBy: 'strapi',
+      },
     },
   },
   // ...
