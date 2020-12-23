@@ -42,7 +42,7 @@ module.exports = ({ env }) => ({
       apiKey: env("POSTMARK_API_KEY"),
     },
     settings: {
-      defaultMessageStream: env("POSTMARK_MESSAGE_STREAM"),
+      defaultMessageStream: "my-stream",
       defaultFrom: "john.doe@ijs.to",
       defaultTo: "john.doe@ijs.to",
       defaultReplyTo: "code@ijs.to",
