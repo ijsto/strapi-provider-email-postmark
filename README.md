@@ -40,7 +40,7 @@ module.exports = ({ env }) => ({
   email: {
     provider: "postmark",
     providerOptions: {
-      apiKey: env("POSTMARK_API_KEY"),
+      apiKey: "your-postmark-api-key",
     },
     settings: {
       defaultMessageStream: "my-stream",
