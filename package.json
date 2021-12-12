@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-email-postmark",
-  "version": "3.5.1",
+  "version": "4.0.0",
   "description": "Strapi Email service provider for Postmark",
   "author": {
     "email": "scott.agirs@gmail.com",
@@ -11,8 +11,8 @@
   },
   "main": "./lib",
   "dependencies": {
-    "postmark": "^2.5.4",
-    "strapi-utils": "3.0.4"
+    "postmark": "^2.7.8",
+    "@strapi/utils": "4.0.0"
   },
   "strapi": {
     "isProvider": true
