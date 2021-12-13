@@ -38,23 +38,31 @@ Path - `config/plugins.js`
 module.exports = ({ env }) => ({
   // ...
   email: {
-    provider: "postmark",
-    providerOptions: {
-      apiKey: "your-postmark-api-key",
-    },
-    settings: {
-      defaultMessageStream: "my-stream",
-      defaultFrom: "john.doe@ijs.to",
-      defaultTo: "john.doe@ijs.to",
-      defaultReplyTo: "code@ijs.to",
-      defaultVariables: {
-        sentBy: 'strapi',
+    config: {
+      provider: "strapi-provider-email-postmark",
+      providerOptions: {
+        apiKey: "your-postmark-api-key",
       },
-    },
+      settings: {
+        defaultMessageStream: "my-stream",
+        defaultFrom: "john.doe@ijs.to",
+        defaultTo: "john.doe@ijs.to",
+        defaultReplyTo: "code@ijs.to",
+        defaultVariables: {
+          sentBy: 'strapi',
+        },
+      },
+    }
   },
   // ...
 });
 ```
+
+**IMPORTANT:** With Strapi v4, you have to set `email.config.provider` to "strapi-provider-email-postmark", instead of "postmark". This is intended in Strapi v4: https://github.com/strapi/strapi/issues/11879.
+
+Additionally, the structure of `plugins.js` has changed:
+- In v3: `"email": {"provider": "", ...}`
+- In v4: `"email": {"config": {"provider": "", ...}}`
 
 ### Usage
 
