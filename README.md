@@ -39,7 +39,7 @@ module.exports = ({ env }) => ({
   // ...
   email: {
     config: {
-      provider: "postmark",
+      provider: "strapi-provider-email-postmark",
       providerOptions: {
         apiKey: "your-postmark-api-key",
       },
@@ -58,17 +58,11 @@ module.exports = ({ env }) => ({
 });
 ```
 
-**IMPORTANT:** With Strapi v4, you might have to set `email.config.provider` to "strapi-provider-email-postmark". Whether this is a bug or a feature in Strapi v4 is not clear yet: https://github.com/strapi/strapi/issues/11879
+**IMPORTANT:** With Strapi v4, you have to set `email.config.provider` to "strapi-provider-email-postmark", instead of "postmark". This is intended in Strapi v4: https://github.com/strapi/strapi/issues/11879.
 
-**If migrating from Strapi v3:** The structure of `plugins.js` changed
-In v3: 
-```json
-"email": {"provider": "", ...}
-```
-In v4:
-```json
-"email": {"config": {"provider": "", ...}}
-```
+Additionally, the structure of `plugins.js` has changed:
+- In v3: `"email": {"provider": "", ...}`
+- In v4: `"email": {"config": {"provider": "", ...}}`
 
 ### Usage
 
