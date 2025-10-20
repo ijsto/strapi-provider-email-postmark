@@ -1,3 +1,5 @@
+⚠️ For Strapi 5 use https://github.com/strapi-community/provider-email-postmark
+
 # strapi-provider-email-postmark
 
 [Strapi](http://strapi.io/) email service for [Postmark](https://postmarkapp.com/)
